@@ -2,7 +2,7 @@
 		sudo swapoff -a
 		vi /etc/fstab -> swap 부분 # 로 주석 ( #/swap.img       none    swap    sw      0       0 )
 		
-	#설정
+	# 설정
 		sudo modprobe br_netfilter
 		sudo modprobe overlay
 		
@@ -71,19 +71,19 @@
             ex) kubeadm join 10.10.211.151:6443 --token 38dtau.bwula7qrlth786zk \
                      --discovery-token-ca-cert-hash sha256:d9970ca63dfa83b29349b9bc51bc22bf89cf9e09948c6d6a1ae27552eccb1599![image](https://user-images.githubusercontent.com/14196841/213378312-adeff219-5b45-46ab-a267-3641b573ea2f.png)
 
-# 마스터 노드만 생성되었을 시
-root@master:~# kubectl get nodes
-NAME     STATUS   ROLES           AGE   VERSION
-master   Ready    control-plane   47s   v1.25.4
+            # 마스터 노드만 생성되었을 시
+            root@master:~# kubectl get nodes
+            NAME     STATUS   ROLES           AGE   VERSION
+            master   Ready    control-plane   47s   v1.25.4
 
-# 워커 노드 생성을 kubeadmin join을 했을 시
-root@master:~# kubectl get nodes
-NAME     STATUS   ROLES           AGE     VERSION
-master   Ready    control-plane   25m     v1.25.4
-node1    Ready    <none>          4m31s   v1.25.4
-	
-root@master:~# kubectl get nodes
-NAME     STATUS   ROLES           AGE   VERSION
-master   Ready    control-plane   32m   v1.25.4
-node1    Ready    <none>          11m   v1.25.4
-node2    Ready    <none>          55s   v1.25.4
+            # 워커 노드 생성을 kubeadmin join을 했을 시
+            root@master:~# kubectl get nodes
+            NAME     STATUS   ROLES           AGE     VERSION
+            master   Ready    control-plane   25m     v1.25.4
+            node1    Ready    <none>          4m31s   v1.25.4
+ 	
+            root@master:~# kubectl get nodes
+            NAME     STATUS   ROLES           AGE   VERSION
+            master   Ready    control-plane   32m   v1.25.4
+            node1    Ready    <none>          11m   v1.25.4
+            node2    Ready    <none>          55s   v1.25.4
