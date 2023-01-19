@@ -53,7 +53,8 @@
 		sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
 		echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
 		sudo apt-get update
-		sudo apt-get install -y kubelet kubeadm kubectl (특정버전 맞추어sudo apt-get install kubelet=1.25.4-00 kubeadm=1.25.4-00 kubectl=1.25.4-00 )
+		sudo apt-get install -y kubelet kubeadm kubectl 
+		(특정버전 맞춰서 하려면 :: sudo apt-get install kubelet=1.25.4-00 kubeadm=1.25.4-00 kubectl=1.25.4-00 )
 		sudo apt-mark hold kubelet kubeadm kubectl
 		
 		
