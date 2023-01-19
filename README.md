@@ -65,4 +65,4 @@
 		
 		# 실패시 아래명령어
 		sudo ufw disable
-                sudo kubeadm reset
+            sudo kubeadm reset
